@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 
 import Link from 'next/link'
 
@@ -8,11 +8,6 @@ import { ToggleContext } from './context/buttonToggle';
 
 function Header() {
     const { toggle, toggleButton } = useContext(ToggleContext);
-
-    useEffect(() => {
-        console.log(toggle)
-    }, [toggle])
-
 
     return (
         <div className={`${toggle ? 'bg-gray-500' : 'bg-red-500'} p-4 flex`}>
