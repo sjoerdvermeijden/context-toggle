@@ -13,7 +13,7 @@ function Header() {
         <div className={`${toggle ? 'bg-gray-500' : 'bg-red-500'} p-4 flex`}>
             <div className='mr-auto'>
                 <Link href="/">
-                    <h1 className='text-3xl'>Header</h1>
+                    <h1 className={`text-3xl ${toggle ? 'text-white' : ''}`}>Header</h1>
                 </Link>
             </div>
             <nav className='flex items-center mr-2'>

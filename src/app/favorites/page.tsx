@@ -13,8 +13,8 @@ function FavoritePage() {
                 <h1 className='mb-6 text-3xl'>Favorites</h1>
                 <ul className='list-none flex flex-col gap-2'>
                     {
-                        favorites?.map((item) => {
-                            return <li key={item.id}>
+                        favorites?.map((item, index) => {
+                            return <li key={index}>
                                 <div className='p-2 bg-gray-200'>
                                     <h3 className='text-xl'>{item.title}</h3>
                                 </div>

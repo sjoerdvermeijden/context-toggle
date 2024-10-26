@@ -26,8 +26,17 @@ function FavoriteComponent({ children }: { children: React.ReactNode }) {
 
     const addMovie = (id: number) => {
         const newArray = movies.filter((item) => item.id === id);
+        const singleMovie = newArray[0].id;
 
-        setFavorites([...favorites, { id: newArray[0].id, title: newArray[0].title }])
+        const moviesID = favorites.map((item) => {
+            return item.id;
+        })
+
+        if (moviesID.includes(singleMovie)) {
+            setFavorites([...favorites])
+        } else {
+            setFavorites([...favorites, { id: newArray[0].id, title: newArray[0].title }])
+        }
     }
 
     return (
