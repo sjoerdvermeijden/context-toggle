@@ -3,6 +3,7 @@
 import React from 'react'
 
 import ToggleComponent from './context/buttonToggle'
+import FavoriteComponent from './context/favoriteContext'
 
 type Props = {
     children: React.ReactNode
@@ -11,9 +12,11 @@ type Props = {
 function Providers({ children }: Props) {
     return (
         <>
-            <ToggleComponent>
-                {children}
-            </ToggleComponent>
+            <FavoriteComponent>
+                <ToggleComponent>
+                    {children}
+                </ToggleComponent>
+            </FavoriteComponent>
         </>
     )
 }
